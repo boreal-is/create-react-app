@@ -459,9 +459,8 @@ module.exports = function (webpackEnv) {
                       },
                     },
                   ],
-                  [
-                    isEnvDevelopment &&
-                      shouldUseReactRefresh &&
+                  isEnvDevelopment &&
+                    shouldUseReactRefresh && [
                       require.resolve('react-refresh/babel'), 
                     { 
                       skipEnvCheck: process.env.BABEL_ENV === 'test'
